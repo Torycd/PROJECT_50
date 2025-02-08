@@ -10,7 +10,7 @@ const Navigation = () => {
 
   return (
     <div className="flex justify-between max-w-[1440px] m-5 md:mx-auto md:my-5 items-center">
-      <h2 className="text-[26px] font-bold font-Serif">INSURE</h2>
+      <h2 className="text-[26px] font-medium tracking-widest font-Serif">INSURE</h2>
       <div className="hidden lg:block">
         <ul className="flex uppercase space-x-10 text-[16px] font-semibold items-center">
           <li className={style}>How we work</li>
