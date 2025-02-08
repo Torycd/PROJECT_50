@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Serif: ["DM+Serif+Display"],
+        Serif: ["DM Serif Display"],
         Karla: ["Karla"],
       },
     },

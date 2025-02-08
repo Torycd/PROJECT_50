@@ -14,8 +14,8 @@ const App = () => {
           element: <HomePage />,
         },
         {
-          path:"Next-page"
-        }
+          path: "Next-page",
+        },
       ],
     },
   ]);
