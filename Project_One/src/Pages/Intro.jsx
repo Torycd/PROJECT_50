@@ -17,7 +17,7 @@ const Intro = () => {
           you. Ensure you
           <br /> and your loved ones are protected.
         </p>
-        <Button>View Plans</Button>
+        <Button styling="border-white">View Plans</Button>
       </div>
     </div>
   );

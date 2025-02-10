@@ -24,7 +24,7 @@ const Navigation = () => {
             </li>
             <li className={style}>Blog</li>
             <li className={style}>Account</li>
-            <Button>view plans</Button>
+            <Button styling="border-black">view plans</Button>
           </ul>
         </div>
         <div
