@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Navigation = () => {
   const [navigation, setNavigation] = useState(false);
-  const style = "text-gray-500 hover:text-black duration-200";
+  const style = "text-gray-500 hover:text-black duration-200 cursor-pointer";
 
   const handleNavigation = () => {
     setNavigation(!navigation);
