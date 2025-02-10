@@ -14,7 +14,7 @@ const Navigation = () => {
   return (
     <div>
       <div className="flex justify-between max-w-[1440px] m-5 md:mx-auto md:my-5 items-center">
-        <h2 className="text-[26px] font-medium tracking-widest font-Serif">
+        <h2 className="text-[26px] md:text-[36px] font-medium tracking-widest font-Serif">
           INSURE
         </h2>
         <div className="hidden lg:block">
@@ -31,7 +31,7 @@ const Navigation = () => {
           className="md:hidden p-2 border-2 border-black"
           onClick={handleNavigation}
         >
-          {navigation ? <FaBars size={20} /> : <FaCross size={20} />}
+          {navigation ? <FaCross size={20} /> :  <FaBars size={20} /> }
         </div>
       </div>
       <div
