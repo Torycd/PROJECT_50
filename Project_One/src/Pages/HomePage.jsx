@@ -24,7 +24,7 @@ const HomePage = () => {
               <Intro />
             </div>
 
-            <div className="translate-y-[100px]">
+            <div className="md:translate-y-[100px]">
               <img
                 className="h-full"
                 src="/src/assets/images/image-intro-desktop.jpg"
