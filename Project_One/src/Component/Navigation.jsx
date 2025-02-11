@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaBars, FaCross } from "react-icons/fa";
 
 import Button from "./Button";
+import Logo from "../assets/images/logo.svg"
 
 const Navigation = () => {
   const [navigation, setNavigation] = useState(false);
@@ -14,9 +15,7 @@ const Navigation = () => {
   return (
     <div>
       <div className="flex justify-between max-w-[1440px] m-5 md:mx-auto md:my-5 font-Karla items-center">
-        <h2 className="text-[26px] md:text-[36px] font-medium tracking-widest">
-          INSURE
-        </h2>
+        <img src={Logo} alt="logo" />
         <div className="hidden lg:block">
           <ul className="flex uppercase space-x-10 text-[16px] font-semibold items-center">
             <li className={style} end>
