@@ -4,7 +4,7 @@ import Different from "./Pages/Different";
 
 const App = () => {
   return (
-    <div>
+    <div className="font-Serif">
       <Navigation />
       <HomePage />
       <Different/>

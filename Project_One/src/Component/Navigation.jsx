@@ -13,8 +13,8 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="flex justify-between max-w-[1440px] m-5 md:mx-auto md:my-5 items-center">
-        <h2 className="text-[26px] md:text-[36px] font-medium tracking-widest font-Serif">
+      <div className="flex justify-between max-w-[1440px] m-5 md:mx-auto md:my-5 font-Karla items-center">
+        <h2 className="text-[26px] md:text-[36px] font-medium tracking-widest">
           INSURE
         </h2>
         <div className="hidden lg:block">
