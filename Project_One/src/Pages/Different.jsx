@@ -24,11 +24,12 @@ const Different = () => {
         " Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.",
     },
   ];
-
   return (
     <div className="mt-[100px] max-w-[1440px] mx-auto">
       <hr className="w-[200px] hidden sm:block border-black text-[24px] z-100" />
-      <h2 className="text-[40px] text-center sm:text-left md:text-[60px] mt-[20px]">We&apos;re are different</h2>
+      <h2 className="text-[40px] text-center sm:text-left md:text-[60px] mt-[20px]">
+        We&apos;re are different
+      </h2>
       <div className="flex flex-col md:flex-row justify-between gap-2 my-[20px]">
         {DUMMY.map((item) => (
           <Card
@@ -38,6 +39,9 @@ const Different = () => {
             icon={item.icon}
           />
         ))}
+      </div>
+      <div className="mt-[60px]">
+        
       </div>
     </div>
   );
