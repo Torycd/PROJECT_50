@@ -41,7 +41,7 @@ const Different = () => {
           />
         ))}
       </div>
-      <div className="mt-[60px]">
+      <div className="mt-[60px] ">
         <More/>
       </div>
     </div>
