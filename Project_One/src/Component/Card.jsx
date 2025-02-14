@@ -4,7 +4,7 @@ const Card = ({ statement, icon, title }) => {
   return (
     <div>
       <img src={icon} alt={title} className="w-[86px] h-[86px] mb-6 left-0" />
-      <h2 className="text-[24px]">{title}</h2>
+      <h2 className="text-[24px] mb-6">{title}</h2>
       <p className="text-[16px] opacity-50">{statement}</p>
     </div>
   );

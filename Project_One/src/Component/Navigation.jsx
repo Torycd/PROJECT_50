@@ -36,7 +36,7 @@ const Navigation = () => {
       <div
         className={
           navigation
-            ? "flex flex-col fixed right-0 w-[100%] border-r h-full bg-black text-white ease-in-out duration-500 sm:hidden"
+            ? "flex flex-col fixed right-0 w-[100%] z-50 border-r h-full bg-black text-white ease-in-out duration-500 sm:hidden"
             : "fixed right-[-100%]"
         }
       >

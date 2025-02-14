@@ -9,7 +9,7 @@ const Different = () => {
       title: "Snappy Process",
       icon: snappy,
       statement:
-        " Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.",
+        "Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.",
     },
     {
       title: "Affordable Prices",
