@@ -2,23 +2,23 @@ import Intro from "./Intro";
 
 const HomePage = () => {
   return (
-    <div className="h-screen relative">
-      <div className="w-full h-full absolute">
+    <div className="h-screen">
+      <div className="w-full h-full">
         <div
-          className="hidden sm:block absolute top-0 left-0 w-full h-full bg-no-repeat bg-left z-20"
           style={{
-            backgroundImage:
-              'url("/src/assets/images/bg-pattern-intro-left-desktop.svg")',
+            backgroundImage: `url("/src/assets/images/bg-pattern-intro-right-desktop.svg"),
+    ${
+      window.innerWidth < 640
+        ? 'url("/src/assets/images/bg-pattern-intro-left-mobile.svg")'
+        : 'url("/src/assets/images/bg-pattern-intro-left-desktop.svg")'
+    }
+  `,
+            backgroundPosition: "right top, left bottom",
+            backgroundRepeat: "no-repeat, no-repeat",
+            backgroundSize: "contain, contain",
           }}
-        />
-        <div
-          className="hidden sm:block absolute top-0 right-0 w-full h-full bg-no-repeat bg-right-top z-20"
-          style={{
-            backgroundImage:
-              'url("/src/assets/images/bg-pattern-intro-right-desktop.svg")',
-          }}
-        />
-        <div className="relative z-10 sm:h-[700px] bg-purple-900">
+          className="z-10 bg-purple-900"
+        >
           <div className="max-w-[1440px] flex mx-auto flex-col-reverse sm:flex sm:flex-row sm:justify-between">
             <div className="text-white my-[60px] sm:mt-[100px]">
               <Intro />
