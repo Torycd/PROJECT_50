@@ -19,8 +19,8 @@ const HomePage = () => {
           }}
         />
         <div className="relative z-10 sm:h-[700px] bg-purple-900">
-          <div className="max-w-[1440px] flex mx-auto flex-col-reverse sm:flex sm:justify-between">
-            <div className="text-white mb-[24px] sm:mt-[100px]">
+          <div className="max-w-[1440px] flex mx-auto flex-col-reverse sm:flex sm:flex-row sm:justify-between">
+            <div className="text-white my-[60px] sm:mt-[100px]">
               <Intro />
             </div>
 

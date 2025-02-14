@@ -27,9 +27,9 @@ const Different = () => {
 
   return (
     <div className="mt-[100px] max-w-[1440px] mx-auto">
-      <hr className="w-[200px] border-black text-[24px] z-100" />
-      <h2 className="text-[60px] mt-[20px]">We&apos;re are different</h2>
-      <div className="flex justify-between gap-2 my-[20px]">
+      <hr className="w-[200px] hidden sm:block border-black text-[24px] z-100" />
+      <h2 className="text-[40px] text-center sm:text-left md:text-[60px] mt-[20px]">We&apos;re are different</h2>
+      <div className="flex flex-col md:flex-row justify-between gap-2 my-[20px]">
         {DUMMY.map((item) => (
           <Card
             statement={item.statement}
