@@ -44,7 +44,7 @@ const Navigation = () => {
           <li>How we work</li>
           <li>Blog</li>
           <li>Acounts</li>
-          <Button>view plans</Button>
+          <Button styling="hover:bg-black hover:text-white">view plans</Button>
         </ul>
       </div>
     </div>

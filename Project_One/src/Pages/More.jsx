@@ -1,3 +1,5 @@
+import Button from "../Component/Button";
+
 const More = () => {
   return (
     <div className="absolute max-w-[1440px] bg-purple-900 text-white w-full">
@@ -9,10 +11,15 @@ const More = () => {
         }}
       />
       <div className="relative w-full z-10 p-20">
-        <h2 className="text-[64px]">
-          Find out more
-          <br /> about how we work
-        </h2>
+        <div className="flex justify-between">
+          <h2 className="text-[64px]">
+            Find out more
+            <br /> about how we work
+          </h2>
+          <div className="flex flex-col justify-center">
+            <Button styling={"hover:bg-white hover:text-black"}>How we work</Button>
+          </div>
+        </div>
       </div>
     </div>
   );
