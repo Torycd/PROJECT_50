@@ -1,9 +1,6 @@
-// import React from 'react'
 
 const More = () => {
-  return (
-    <div>More</div>
-  )
-}
+  return <div>More</div>;
+};
 
-export default More
+export default More;
