@@ -2,6 +2,7 @@ import snappy from "../assets/images/icon-snappy-process.svg";
 import afford from "../assets/images/icon-affordable-prices.svg";
 import people from "../assets/images/icon-people-first.svg";
 import Card from "../Component/Card";
+import More from "./More";
 
 const Different = () => {
   const DUMMY = [
@@ -25,7 +26,7 @@ const Different = () => {
     },
   ];
   return (
-    <div className="mt-[100px] max-w-[1440px] mx-auto">
+    <div className="mt-[100px] max-w-[1440px] mx-auto overflow-hidden">
       <hr className="w-[200px] hidden sm:block border-black text-[24px] z-100" />
       <h2 className="text-[40px] text-center sm:text-left md:text-[60px] mt-[20px]">
         We&apos;re are different
@@ -41,7 +42,7 @@ const Different = () => {
         ))}
       </div>
       <div className="mt-[60px]">
-        
+        <More/>
       </div>
     </div>
   );
