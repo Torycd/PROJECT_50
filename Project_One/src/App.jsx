@@ -5,7 +5,7 @@ import Footer from "./Pages/Footer";
 
 const App = () => {
   return (
-    <div className="font-Serif w-screen overflow-hidden">
+    <div className="font-Serif max-w-[100vw] overflow-hidden">
       <Navigation />
       <HomePage />
       <Different/>

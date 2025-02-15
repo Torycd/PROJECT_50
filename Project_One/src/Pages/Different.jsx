@@ -26,23 +26,37 @@ const Different = () => {
     },
   ];
   return (
-    <div className="mt-[100px] max-w-[1440px] mx-auto overflow-hidden">
-      <hr className="w-[200px] hidden sm:block border-black text-[24px] z-100" />
-      <h2 className="text-[40px] text-center sm:text-left md:text-[60px] mt-[20px]">
-        We&apos;re are different
-      </h2>
-      <div className="flex flex-col md:flex-row justify-between gap-2 my-[20px]">
-        {DUMMY.map((item) => (
-          <Card
-            statement={item.statement}
-            key={item.title}
-            title={item.title}
-            icon={item.icon}
-          />
-        ))}
-      </div>
-      <div className="block sm:max-w-[1440px] p-[20px]  mt-[60px] ">
-        <More/>
+    <div className="w-screen">
+      <div className="mt-[100px] max-w-[1440px] mx-auto overflow-hidden">
+        <hr className="w-[200px] hidden sm:block border-black text-[24px] z-100" />
+        <h2 className="text-[40px] text-center sm:text-left md:text-[60px] mt-[20px]">
+          We&apos;re are different
+        </h2>
+        <div className="flex flex-col md:flex-row justify-between gap-2 my-[20px]">
+          {DUMMY.map((item) => (
+            <Card
+              statement={item.statement}
+              key={item.title}
+              title={item.title}
+              icon={item.icon}
+            />
+          ))}
+        </div>
+        <div
+          style={{
+            backgroundImage: `url(${
+              window.innerWidth >= 640
+                ? "/src/assets/images/bg-pattern-how-we-work-desktop.svg"
+                : "/src/assets/images/bg-pattern-footer-mobile.svg"
+            })`,
+            backgroundPosition: "right top",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+          }}
+          className="w-full bg-purple-900 p-[40px] mt-[60px] "
+        >
+          <More />
+        </div>
       </div>
     </div>
   );

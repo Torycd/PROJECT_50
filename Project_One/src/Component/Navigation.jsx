@@ -13,8 +13,8 @@ const Navigation = () => {
   };
 
   return (
-    <div>
-      <div className="flex justify-between max-w-[1440px] m-5 md:mx-auto md:my-5 font-Karla items-center">
+    <div className="w-screen overflow-hidden">
+      <div className="flex justify-between max-w-[1440px] m-5 sm:mx-auto sm:my-5 font-Karla items-center">
         <img src={Logo} alt="logo" />
         <div className="hidden lg:block">
           <ul className="flex uppercase space-x-10 text-[16px] font-semibold items-center">
