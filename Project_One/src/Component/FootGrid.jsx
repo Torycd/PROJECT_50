@@ -2,10 +2,10 @@
 
 const FootGrid = () => {
   return (
-    <div className="grid grid-col-1 sm:grid-cols-4">
+    <div className="grid grid-col-1 sm:grid-cols-4 text-[20px]">
       <div>
         <h2 className="mb-[30px] opacity-50 font-bold">Our company</h2>
-        <ul className="flex flex-col gap-2 font-semibold">
+        <ul className="flex flex-col opacity-60 gap-2 font-semibold">
           <li>
             <a href="" className="hover:underline">
               How we work
