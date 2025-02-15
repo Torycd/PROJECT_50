@@ -10,7 +10,7 @@ const Icons = () => {
     <div className="flex flex-col mx-4 sm:mx-0 sm:flex-row gap-4 items-center justify-between">
       <img src={Logo} alt="logo" className="w-[200px]" />
       <div className="flex justify-between space-x-4">
-        <img src={Facebook} alt="icons" />
+        <img src={Facebook} alt="icons" className="" />
         <img src={Twitter} alt="icons" />
         <img src={Instagram} alt="icons" />
         <img src={Pinterest} alt="icons" />
