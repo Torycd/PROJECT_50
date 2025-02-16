@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaCross } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import Button from "./Button";
 import Logo from "../assets/images/logo.svg";
@@ -30,7 +30,7 @@ const Navigation = () => {
           className="md:hidden p-2 border-2 border-black"
           onClick={handleNavigation}
         >
-          {navigation ? <FaCross size={20} /> : <FaBars size={20} />}
+          {navigation ? <FaTimes size={20} /> : <FaBars size={20} />}
         </div>
       </div>
       <div

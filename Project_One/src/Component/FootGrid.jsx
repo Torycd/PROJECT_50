@@ -2,7 +2,7 @@
 
 const FootGrid = () => {
   return (
-    <div className="grid grid-col-1 sm:grid-cols-4 text-[20px]">
+    <div className="grid grid-col-1 text-center sm:text-left sm:grid-cols-4 text-[20px]">
       <div>
         <h2 className="mb-[30px] opacity-50 font-bold">Our company</h2>
         <ul className="flex flex-col opacity-60 gap-2 font-semibold">
