@@ -1,4 +1,5 @@
 import Intro from "./Intro";
+import Image from "/src/assets/images/image-intro-desktop.jpg"
 
 const HomePage = () => {
   return (
@@ -25,7 +26,7 @@ const HomePage = () => {
           <div className="sm:translate-y-[100px]">
             <img
               className="h-full"
-              src="/src/assets/images/image-intro-desktop.jpg"
+              src={Image}
               alt="Image intro"
             />
           </div>
