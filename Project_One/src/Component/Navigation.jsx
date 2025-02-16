@@ -36,16 +36,20 @@ const Navigation = () => {
       <div
         className={
           navigation
-            ? "flex flex-col fixed right-0 w-[100%] z-50 border-r h-full bg-black text-white ease-in-out duration-500 sm:hidden"
+            ? "flex flex-col fixed right-0  w-[100%] z-50 border-r h-full bg-black text-white ease-in-out duration-500 sm:hidden"
             : "fixed right-[-100%]"
         }
       >
-        <ul className="flex flex-col mt-5 text-center uppercase ml-10 gap-7 font-normal text-2xl">
-          <li>How we work</li>
-          <li>Blog</li>
-          <li>Acounts</li>
-          <Button styling="hover:bg-black hover:text-white">view plans</Button>
-        </ul>
+        <div className="w-full flex justify-center">
+          <ul className="flex flex-col mt-5 items-center text-center uppercase ml-10 space-y-[40px] font-normal text-2xl">
+            <li>How we work</li>
+            <li>Blog</li>
+            <li>Acounts</li>
+            <Button styling="hover:bg-black hover:text-white">
+              view plans
+            </Button>
+          </ul>
+        </div>
       </div>
     </div>
   );
