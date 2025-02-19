@@ -1,5 +1,7 @@
 // import React from 'react'
-import image from "../assets/images/image-cake-desktop.jpg";
+
+import Card from "./Card";
+
 
 const Items = () => {
   const DUMMY_ITEMS = [
@@ -65,29 +67,9 @@ const Items = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-3">
       {/* card */}
-      <div className="overflow-hidden hover:shadow-lg transition-shadow duration-300"
-      >
-        <div className="relative h-48">
-          <img
-            src={image}
-            alt=""
-            className="w-full h-full rounded-md object-cover"
-          />
-          <div className="absolute top-2 right-2 bg-white px-2 py-1 rounded-full">
-            <span className="text-sm font-semibold">
-              5.00
-            </span>
-          </div>
-        </div>
-        <div className="p-4">
-          <div className="mb-1">
-            <span className="text-sm text-gray-500">htht</span>
-          </div>
-          <h3 className="text-lg font-semibold line-clamp-2">hh</h3>
-        </div>
-      </div>
+     <Card/>
     </div>
   );
 };
