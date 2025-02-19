@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-import { DUMMY_ITEMS } from './dummy-item'
+import { DUMMY_ITEMS } from '../Store/dummy-item'
 
 const Items = () => {
   
