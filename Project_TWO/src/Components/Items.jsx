@@ -10,8 +10,6 @@ import Cake from "../assets/images/image-cake-desktop.jpg";
 import Brownie from "../assets/images/image-brownie-desktop.jpg";
 import Panna from "../assets/images/image-panna-cotta-desktop.jpg";
 
-
-
 const Items = () => {
   const DUMMY_ITEMS = [
     {
@@ -71,11 +69,15 @@ const Items = () => {
   ];
   return (
     <div className="grid grid-cols-3 gap-8">
-      {/* card */}
-
-     {DUMMY_ITEMS.map((item) => (
-        <Card key={item.name} name={item.name} title={item.type} price={item.price} image={item.image} />
-     ))}
+      {DUMMY_ITEMS.map((item) => (
+        <Card
+          key={item.name}
+          name={item.name}
+          title={item.type}
+          price={item.price}
+          image={item.image}
+        />
+      ))}
     </div>
   );
 };
