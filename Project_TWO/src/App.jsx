@@ -4,12 +4,12 @@ import Items from "./Components/Items";
 
 const App = () => {
   return (
-    <div className="flex justify-between m-20">
+    <div className="flex justify-between my-[50px] mx-[150px]">
       <div>
-        <h2 className="text-[32px] font-bold mb-[40px]">Desserts</h2>
+        <h2 className="text-[32px] font-bold mb-[50px]">Desserts</h2>
         <Items />
       </div>
-      <div>Cart</div>
+      <div className="">Cart</div>
     </div>
   );
 };

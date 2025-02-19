@@ -1,6 +1,14 @@
-// import React from 'react'
-
 import Card from "./Card";
+
+import Waffle from "../assets/images/image-cake-desktop.jpg";
+import Vanilla from "../assets/images/image-creme-brulee-desktop.jpg";
+import Macaron from "../assets/images/image-macaron-desktop.jpg";
+import Tiramisu from "../assets/images/image-tiramisu-desktop.jpg";
+import Baklava from "../assets/images/image-baklava-desktop.jpg";
+import Pie from "../assets/images/image-meringue-desktop.jpg";
+import Cake from "../assets/images/image-cake-desktop.jpg";
+import Brownie from "../assets/images/image-brownie-desktop.jpg";
+
 
 
 const Items = () => {
@@ -9,55 +17,49 @@ const Items = () => {
       type: "Waffle",
       name: "Waffle with Berries",
       price: 6.5,
-      image: "",
+      image: Waffle,
     },
     {
       type: "Crème Brûlée",
       name: "Vanilla Bean Crème Brûlée",
       price: 7.0,
-      image: "",
+      image: Vanilla,
     },
     {
       type: "Macaron",
       name: "Macaron Mix of Five",
       price: 8.0,
-      image: "",
+      image: Macaron,
     },
     {
       type: "Tiramisu",
       name: "Classic Tiramisu",
       price: 5.5,
-      image: "",
-    },
-    {
-      type: "Tiramisu",
-      name: "Classic Tiramisu",
-      price: 5.5,
-      image: "",
+      image: Tiramisu,
     },
     {
       type: "Baklava",
       name: "Pistachio Baklava",
       price: 4.0,
-      image: "",
+      image: Baklava,
     },
     {
       type: "Pie",
       name: "Lemon Meringue Pie",
       price: 5.0,
-      image: "",
+      image: Pie,
     },
     {
       type: "Cake",
       name: "Red Velvet Cake",
       price: 4.5,
-      image: "",
+      image: Cake,
     },
     {
       type: "Brownie",
       name: "Salted Caramel Brownie",
       price: 4.5,
-      image: "",
+      image: Brownie,
     },
     {
       type: "Panna Cotta",
@@ -67,9 +69,12 @@ const Items = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 gap-8">
       {/* card */}
-     <Card/>
+
+     {DUMMY_ITEMS.map((item) => (
+        <Card key={item.name} name={item.name} title={item.type} price={item.price} image={item.image} />
+     ))}
     </div>
   );
 };

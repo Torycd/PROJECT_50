@@ -1,5 +1,4 @@
 import { FaCartShopping } from "react-icons/fa6";
-// import image from "../assets/images/image-cake-desktop.jpg";
 // import React from 'react'
 
 const Card = ({name, title, price, image}) => {
@@ -18,10 +17,10 @@ const Card = ({name, title, price, image}) => {
       </div>
       <div className="p-4">
         <div className="mb-1">
-          <span className="text-sm text-gray-500">{title}</span>
+          <h2 className="text-gray-600">{title}</h2>
         </div>
         <h3 className="text-lg font-semibold line-clamp-2">{name}</h3>
-        <h3 className="text-lg font-semibold line-clamp-2">{`$${price}`}</h3>
+        <h3 className="text-lg font-bold line-clamp-2 text-orange-500">{`$${price.toFixed(2)}`}</h3>
       </div>
     </div>
   );
