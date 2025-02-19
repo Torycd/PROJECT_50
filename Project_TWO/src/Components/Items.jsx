@@ -8,6 +8,7 @@ import Baklava from "../assets/images/image-baklava-desktop.jpg";
 import Pie from "../assets/images/image-meringue-desktop.jpg";
 import Cake from "../assets/images/image-cake-desktop.jpg";
 import Brownie from "../assets/images/image-brownie-desktop.jpg";
+import Panna from "../assets/images/image-panna-cotta-desktop.jpg";
 
 
 
@@ -65,7 +66,7 @@ const Items = () => {
       type: "Panna Cotta",
       name: "Vanilla Panna Cotta",
       price: 6.5,
-      image: "",
+      image: Panna,
     },
   ];
   return (
