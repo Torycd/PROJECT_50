@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import { FaCartShopping } from "react-icons/fa6";
-// import React from 'react'
+
 
 const Card = ({ name, title, price, image }) => {
   return (
