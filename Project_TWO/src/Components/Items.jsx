@@ -1,6 +1,8 @@
-import Card from "./Card";
+// import { useContext } from "react";
+// import { CartContext } from "../Store/DessertContext";
 
-import { DUMMY_ITEMS } from '../Store/dummy-item'
+import Card from "./Card";
+import { DUMMY_ITEMS } from "../Store/dummy-item";
 
 const Items = () => {
   
@@ -8,6 +10,7 @@ const Items = () => {
     <div className="grid grid-cols-3 gap-8">
       {DUMMY_ITEMS.map((item) => (
         <Card
+          id={item.id}
           key={item.id}
           name={item.name}
           title={item.type}
