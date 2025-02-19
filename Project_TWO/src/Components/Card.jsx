@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FaCartShopping } from "react-icons/fa6";
 // import React from 'react'
 
-const Card = ({name, title, price, image}) => {
+const Card = ({ name, title, price, image }) => {
   return (
     <div className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <div className="relative mb-8">
@@ -22,10 +22,19 @@ const Card = ({name, title, price, image}) => {
           <h2 className="text-gray-500 font-bold">{title}</h2>
         </div>
         <h3 className="text-lg font-semibold line-clamp-2">{name}</h3>
-        <h3 className="text-lg font-bold line-clamp-2 text-orange-500">{`$${price.toFixed(2)}`}</h3>
+        <h3 className="text-lg font-bold line-clamp-2 text-orange-500">{`$${price.toFixed(
+          2
+        )}`}</h3>
       </div>
     </div>
   );
 };
 
 export default Card;
+
+Card.propTypes = {
+  name: PropTypes.string,
+  title: PropTypes.string,
+  image: PropTypes.object,
+  price: PropTypes.number
+};
