@@ -15,7 +15,7 @@ export function DesertContextProvider({ children }) {
     items: [],
   });
   const HandlesAddingCartoon = (id) => {
-    // handles adding cartoon to the context
+    // handles adding desert to the context
     setDesertOrder((prevDer) => {
       const updatedDesert = [...prevDer.items];
       const exisitingDersertIndex = updatedDesert.findIndex(
