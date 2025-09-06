@@ -1,12 +1,10 @@
-// import React from 'react'
-
 import Cart from "./Components/Cart";
 import Items from "./Components/Items";
-import { DesertContextProvider } from "./Store/DessertContext";
+import { DesertProvider } from "./Store/DesertProvider";
 
 const App = () => {
   return (
-    <DesertContextProvider>
+    <DesertProvider>
       <div className="bg-rose-50 h-full w-full py-[50px] px-[150px] font-Red">
         <div className="flex justify-between gap-5">
           <div className="w-[70%]">
@@ -18,7 +16,7 @@ const App = () => {
           </div>
         </div>
       </div>
-    </DesertContextProvider>
+    </DesertProvider>
   );
 };
 

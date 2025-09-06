@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import PropTypes from "prop-types";
-import { CartContext } from "../Store/DessertContext";
-
+import { usePost } from "../Store/DesertProvider";
 import { FaCartShopping } from "react-icons/fa6";
 
-const Card = ({ name, title, price, image, id }) => {
-  const { addDesert } = useContext(CartContext);
+const Card = ({ item }) => {
+  const { name, title, price, image } = item;
+  const { addDesert } = usePost();
   return (
     <div className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <div className="relative mb-8">
@@ -16,7 +15,7 @@ const Card = ({ name, title, price, image, id }) => {
         />
         <div
           className="absolute border-2 flex justify-between cursor-pointer items-center gap-4 border-orange-500   top-[100%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-5 py-4 rounded-full"
-          onClick={() => addDesert(id)}
+          onClick={() => addDesert(item)}
         >
           <FaCartShopping className="text-orange-500" size={22} />
           <div className="text-sm font-semibold  ">Add to Cart</div>
@@ -38,8 +37,5 @@ const Card = ({ name, title, price, image, id }) => {
 export default Card;
 
 Card.propTypes = {
-  name: PropTypes.string,
-  title: PropTypes.string,
-  image: PropTypes.object,
-  price: PropTypes.number,
+  item: PropTypes.array,
 };
