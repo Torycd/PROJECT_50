@@ -12,6 +12,7 @@ const DessertCart = createContext({
 function DesertProvider({ children }) {
   const [desertSelected, setDesertSelected] = useState([]);
   console.log(desertSelected);
+
   const allItems = {
     deserts: desertSelected,
     addDesert: HandleAdd,
@@ -19,21 +20,23 @@ function DesertProvider({ children }) {
   };
 
   function HandleAdd(itm) {
-    // setDesertSelected((previousItem) => [...previousItem, itm]);
+    // Handle both existing anf no existing deserts
     if (itm.id)
       setDesertSelected((previousItem) => {
-        const existing = previousItem.find((i) => i.id === itm.id);
+        const existing = previousItem.find((i) => i.id == itm.id);
+        // console.log(existing);
         if (existing) {
           return previousItem.map((ds) =>
-            ds.id === itm.id ? { ...ds, quantity: ds.quantity + 1 } : i
+            ds.id === itm.id ? { ...ds, quantity: ds.quantity + 1 } : ds
           );
         }
-
-        return [...previousItem, { itm, quantity: 1 }];
+        // Spread previous deserts in the list and then spread the particular item and only update its quantity
+        return [...previousItem, { ...itm, quantity: 1 }];
       });
   }
 
   function handleRemove() {}
+
   return (
     <DessertCart.Provider value={allItems}>{children}</DessertCart.Provider>
   );
