@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { usePost } from "../../Store/DesertProvider";
-import { FaTimesCircle } from "react-icons/fa";
+
+
+import svg from "../../assets/images/icon-remove-item.svg";
 
 function CartItem({ desert }) {
   const { removeItem } = usePost();
@@ -19,10 +21,10 @@ function CartItem({ desert }) {
         </div>
       </div>
       <div
-        className="self-center px-2 py-1 cursor-pointer"
+        className="self-center p-2 cursor-pointer border rounded-full"
         onClick={() => removeItem(desert.id)}
       >
-        <FaTimesCircle size={20} />
+        <img src={svg} />
       </div>
     </div>
   );
