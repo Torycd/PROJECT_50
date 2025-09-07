@@ -19,7 +19,7 @@ function CartItem({ desert }) {
         </div>
       </div>
       <div
-        className="self-center border-2 rounded-full px-2 py-1 cursor-pointer"
+        className="self-center px-2 py-1 cursor-pointer"
         onClick={() => removeItem(desert.id)}
       >
         <FaTimesCircle size={20} />
