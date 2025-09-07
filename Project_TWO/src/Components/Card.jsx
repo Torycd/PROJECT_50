@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { usePost } from "../Store/DesertProvider";
 import { FaCartShopping } from "react-icons/fa6";
 import { useEffect, useState } from "react";
+import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 
 const Card = ({ item }) => {
   const { name, title, price, image } = item;
@@ -44,18 +45,12 @@ const Card = ({ item }) => {
           {status ? (
             // our new buttons layout here
             <div className="flex items-center justify-between w-full text-sm font-semibold">
-              <button
-                className="px-2 py-1 rounded-full border border-white"
-                onClick={() => reduceItem(item.id)}
-              >
-                -
+              <button className="px-2 py-1" onClick={() => reduceItem(item.id)}>
+                <FaMinusCircle size={20} />
               </button>
               <span>{quantity}</span>
-              <button
-                className="px-2 py-1 rounded-full border border-white"
-                onClick={() => addDesert(item)}
-              >
-                +
+              <button className="px-2 py-1" onClick={() => addDesert(item)}>
+                <FaPlusCircle size={20} />
               </button>
             </div>
           ) : (

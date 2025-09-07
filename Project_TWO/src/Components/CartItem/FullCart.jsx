@@ -12,11 +12,10 @@ function FullCart() {
   return (
     <div className="flex flex-col space-y-4">
       <div>
-{deserts.map((desert) => (
-        <CartItem key={desert.id} desert={desert} />
-      ))}
+        {deserts.map((desert) => (
+          <CartItem key={desert.id} desert={desert} />
+        ))}
       </div>
-      
       <div className="flex justify-between mt-4">
         <p className="text-[12px] font-semibold text-gray-700">Order Total</p>
         <span className="text-[20px] font-bold">${totalCost.toFixed(2)}</span>
