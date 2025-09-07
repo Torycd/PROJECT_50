@@ -1,24 +1,71 @@
 import PropTypes from "prop-types";
 import { usePost } from "../Store/DesertProvider";
 import { FaCartShopping } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 
 const Card = ({ item }) => {
   const { name, title, price, image } = item;
-  const { addDesert } = usePost();
+  const { deserts, addDesert, reduceItem } = usePost();
+
+  const currentItem = deserts.find((d) => d.id === item.id);
+  const quantity = currentItem ? currentItem.quantity : 0;
+  const [status, setStatus] = useState(false);
+  function handleAdd(item) {
+    setStatus(true);
+    addDesert(item);
+  }
+  // updating status
+  useEffect(() => {
+    if (quantity === 0) {
+      setStatus(false); // reset back to "Add to Cart"
+    } else {
+      setStatus(true); // show quantity controls
+    }
+  }, [quantity]);
+
   return (
-    <div className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <div
+      className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 `}
+    >
       <div className="relative mb-8">
         <img
           src={image}
           alt=""
-          className="w-[320px] h-[320px] rounded-md object-cover"
+          className={`w-[320px] h-[320px] rounded-md object-cover ${
+            status ? "border-2 border-orange-500" : ""
+          }`}
         />
         <div
-          className="absolute border-2 flex justify-between cursor-pointer items-center gap-4 border-orange-500   top-[100%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-5 py-4 rounded-full"
-          onClick={() => addDesert(item)}
+          className={`${
+            status ? "bg-orange-500 text-white" : "bg-white"
+          } w-[180px] absolute border-2 flex items-center justify-center gap-4 border-orange-500 top-[100%] left-1/2 -translate-x-1/2 -translate-y-1/2 px-5 py-3 rounded-full`}
         >
-          <FaCartShopping className="text-orange-500" size={22} />
-          <div className="text-sm font-semibold  ">Add to Cart</div>
+          {!status && <FaCartShopping className="text-orange-500" size={20} />}
+          {status ? (
+            // our new buttons layout here
+            <div className="flex items-center justify-between w-full text-sm font-semibold">
+              <button
+                className="px-2 py-1 rounded-full border border-white"
+                onClick={() => reduceItem(item.id)}
+              >
+                -
+              </button>
+              <span>{quantity}</span>
+              <button
+                className="px-2 py-1 rounded-full border border-white"
+                onClick={() => addDesert(item)}
+              >
+                +
+              </button>
+            </div>
+          ) : (
+            <div
+              className="text-sm font-semibold text-nowrap w-full text-center cursor-pointer"
+              onClick={() => handleAdd(item)}
+            >
+              Add to Cart
+            </div>
+          )}
         </div>
       </div>
       <div className="p-4">

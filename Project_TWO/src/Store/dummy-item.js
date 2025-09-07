@@ -15,6 +15,7 @@ export const DUMMY_ITEMS = [
     name: "Waffle with Berries",
     price: 6.5,
     image: Waffle,
+    selected: false,
   },
   {
     id: "it2",
@@ -22,6 +23,7 @@ export const DUMMY_ITEMS = [
     name: "Vanilla Bean Crème Brûlée",
     price: 7.0,
     image: Vanilla,
+    selected: false,
   },
   {
     id: "it3",
@@ -29,6 +31,7 @@ export const DUMMY_ITEMS = [
     name: "Macaron Mix of Five",
     price: 8.0,
     image: Macaron,
+    selected: false,
   },
   {
     id: "it4",
@@ -36,6 +39,7 @@ export const DUMMY_ITEMS = [
     name: "Classic Tiramisu",
     price: 5.5,
     image: Tiramisu,
+    selected: false,
   },
   {
     id: "it5",
@@ -43,6 +47,7 @@ export const DUMMY_ITEMS = [
     name: "Pistachio Baklava",
     price: 4.0,
     image: Baklava,
+    selected: false,
   },
   {
     id: "it6",
@@ -50,6 +55,7 @@ export const DUMMY_ITEMS = [
     name: "Lemon Meringue Pie",
     price: 5.0,
     image: Pie,
+    selected: false,
   },
   {
     id: "it7",
@@ -57,6 +63,7 @@ export const DUMMY_ITEMS = [
     name: "Red Velvet Cake",
     price: 4.5,
     image: Cake,
+    selected: false,
   },
   {
     id: "it8",
@@ -64,6 +71,7 @@ export const DUMMY_ITEMS = [
     name: "Salted Caramel Brownie",
     price: 4.5,
     image: Brownie,
+    selected: false,
   },
   {
     id: "it9",
@@ -71,5 +79,6 @@ export const DUMMY_ITEMS = [
     name: "Vanilla Panna Cotta",
     price: 6.5,
     image: Panna,
+    selected: false,
   },
 ];

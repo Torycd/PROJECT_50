@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useState } from "react";
 
-import { DUMMY_ITEMS } from "./dummy-item";
+// import { DUMMY_ITEMS } from "./dummy-item";
 
 const DessertCart = createContext({
   deserts: [],
   addDesert: () => {},
-  reDuceItem: () => {},
+  reduceItem: () => {},
+  removeItem: () => {},
 });
 
 function DesertProvider({ children }) {
@@ -16,7 +17,8 @@ function DesertProvider({ children }) {
   const allItems = {
     deserts: desertSelected,
     addDesert: HandleAdd,
-    reDuceItem: handleRemove,
+    reduceItem: handleReduce,
+    removeItem: handleRemove,
   };
 
   function HandleAdd(itm) {
@@ -33,6 +35,16 @@ function DesertProvider({ children }) {
         // Spread previous deserts in the list and then spread the particular item and only update its quantity
         return [...previousItem, { ...itm, quantity: 1 }];
       });
+  }
+  function handleReduce(id) {
+    setDesertSelected(
+      (previousItem) =>
+        previousItem
+          .map((item) =>
+            item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+          )
+          .filter((item) => item.quantity > 0) // keep only items with quantity > 0
+    );
   }
 
   function handleRemove() {}
