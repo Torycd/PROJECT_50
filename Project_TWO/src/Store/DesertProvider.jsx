@@ -47,7 +47,11 @@ function DesertProvider({ children }) {
     );
   }
 
-  function handleRemove() {}
+  function handleRemove(id) {
+    setDesertSelected((previousItem) =>
+      previousItem.filter((item) => id !== item.id)
+    );
+  }
 
   return (
     <DessertCart.Provider value={allItems}>{children}</DessertCart.Provider>

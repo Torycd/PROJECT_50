@@ -1,4 +1,8 @@
+import PropTypes from "prop-types";
+import { usePost } from "../../Store/DesertProvider";
+
 function CartItem({ desert }) {
+  const { removeItem } = usePost();
   const { type, quantity, price } = desert;
   const cost = quantity * price;
   return (
@@ -8,14 +12,23 @@ function CartItem({ desert }) {
         <div className="flex space-x-6">
           <span className="text-orange-500 font-bold">{quantity}x</span>
           <div className="text-gray-500 space-x-3 font-semibold">
-            <span>{`@$${price}`}</span>
-            <span>{`$${cost}`}</span>
+            <span>{`@$${price.toFixed(2)}`}</span>
+            <span>{`$${cost.toFixed(2)}`}</span>
           </div>
         </div>
       </div>
-      <div className="self-center">x</div>
+      <div
+        className="self-center border-2 rounded-full px-2 py-1 cursor-pointer"
+        onClick={() => removeItem(desert.id)}
+      >
+        x
+      </div>
     </div>
   );
 }
 
 export default CartItem;
+
+CartItem.propTypes = {
+  desert: PropTypes.object,
+};
