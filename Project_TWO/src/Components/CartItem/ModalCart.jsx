@@ -4,7 +4,7 @@ function ModalCart({ desert }) {
   const { type, quantity, price, image } = desert;
   const cost = quantity * price;
   return (
-    <div className="flex justify- border-b py-2 items-center text-gray-700">
+    <div className="flex justify-between border-b py-2 items-center text-gray-700">
       <div className="flex space-x-1">
         <span>
           <img src={image} className="w-12 rounded-md" />

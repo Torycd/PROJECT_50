@@ -51,7 +51,7 @@ function FullCart() {
       <Modal
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
-        className="bg-white rounded-2xl shadow-lg p-6 w-[100%] max-w-md mx-auto mt-20 outline-none"
+        className="bg-white rounded-2xl shadow-lg p-6 w-[90%] max-w-md mx-auto mt-20 outline-none"
         overlayClassName="fixed inset-0 bg-black/60  flex items-center justify-center z-50"
       >
         <span>
