@@ -11,7 +11,7 @@ import ModalCart from "./ModalCart";
 Modal.setAppElement("#root");
 
 function FullCart() {
-  const { deserts } = usePost();
+  const { deserts, setDesertSelected } = usePost();
   const [showModal, setShowModal] = useState(false);
   const totalCost = deserts.reduce(
     (total, item) => total + item.quantity * item.price,
@@ -20,6 +20,10 @@ function FullCart() {
 
   const handleConfirm = () => {
     setShowModal(true);
+  };
+
+  const handleNewCart = () => {
+    setDesertSelected([]);
   };
 
   console.log(totalCost);
@@ -52,7 +56,7 @@ function FullCart() {
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
         className="bg-white rounded-2xl shadow-lg p-6 w-[90%] max-w-md mx-auto mt-20 outline-none"
-        overlayClassName="fixed inset-0 bg-black/60  flex items-center justify-center z-50"
+        overlayClassName="fixed inset-0 bg-black/60  flex items-center justify-center"
       >
         <span>
           <img src={svg1} />
@@ -75,7 +79,7 @@ function FullCart() {
           </div>
         </div>
         <button
-          // onClick={handleNewCart}
+          onClick={handleNewCart}
           className="w-full bg-orange-500 text-white rounded-full py-3 font-semibold hover:bg-orange-600 transition"
         >
           Start New Cart

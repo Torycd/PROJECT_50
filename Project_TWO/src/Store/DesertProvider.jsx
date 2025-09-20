@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useState } from "react";
 
-// import { DUMMY_ITEMS } from "./dummy-item";
-
 const DessertCart = createContext({
   deserts: [],
   addDesert: () => {},
@@ -19,6 +17,7 @@ function DesertProvider({ children }) {
     addDesert: HandleAdd,
     reduceItem: handleReduce,
     removeItem: handleRemove,
+    setDesertSelected
   };
 
   function HandleAdd(itm) {

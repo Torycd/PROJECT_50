@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { usePost } from "../../Store/DesertProvider";
 
-
 import svg from "../../assets/images/icon-remove-item.svg";
 
 function CartItem({ desert }) {
