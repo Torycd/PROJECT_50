@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { usePost } from "../Store/DesertProvider";
-import { FaCartShopping } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
 import svg from "../assets/images/icon-increment-quantity.svg";
@@ -35,7 +34,7 @@ const Card = ({ item }) => {
         <img
           src={image}
           alt=""
-          className={`w-[320px] h-[320px] rounded-md object-cover ${
+          className={`w-full sm:w-[320px] sm:h-[320px] rounded-md object-cover ${
             status ? "border-2 border-orange-500" : ""
           }`}
         />

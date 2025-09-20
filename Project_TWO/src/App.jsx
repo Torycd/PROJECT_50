@@ -5,13 +5,13 @@ import { DesertProvider } from "./Store/DesertProvider";
 const App = () => {
   return (
     <DesertProvider>
-      <div className="bg-rose-50 h-full w-full py-[50px] px-[150px] font-Red">
-        <div className="flex justify-between gap-5">
-          <div className="w-[70%]">
+      <div className="bg-rose-50 h-full w-full py-[10px] px-[20px] sm:py-[50px] sm:px-[150px] font-Red">
+        <div className="flex flex-col sm:flex-row justify-between sm:gap-5">
+          <div className="sm:w-[70%]">
             <h2 className="text-[32px] font-bold mb-[50px]">Desserts</h2>
             <Items />
           </div>
-          <div className="w-[30%] ">
+          <div className="sm:w-[30%] ">
             <Cart />
           </div>
         </div>
