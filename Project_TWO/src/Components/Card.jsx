@@ -33,7 +33,7 @@ const Card = ({ item }) => {
       <div className="relative mb-8">
         <img
           src={image}
-          alt=""
+          alt="desert-look"
           className={`w-full sm:w-[320px] sm:h-[320px] rounded-md object-cover ${
             status ? "border-2 border-orange-500" : ""
           }`}
@@ -44,7 +44,9 @@ const Card = ({ item }) => {
           } w-[180px] absolute border-2 flex items-center justify-center gap-4 border-orange-500 top-[100%] left-1/2 -translate-x-1/2 -translate-y-1/2 px-5 py-3 rounded-full`}
           onClick={!status ? () => handleAdd(item) : undefined}
         >
-          {!status && <img src={svg2} className="text-orange-500" />}
+          {!status && (
+            <img src={svg2} alt="cart-icon" className="text-orange-500" />
+          )}
           {status ? (
             // our new buttons layout here
             <div className="flex items-center justify-between w-full text-sm font-semibold">
@@ -52,14 +54,14 @@ const Card = ({ item }) => {
                 className="self-center px-3 py-4 cursor-pointer border rounded-full"
                 onClick={() => reduceItem(item.id)}
               >
-                <img src={svg1} />
+                <img src={svg1} alt="decrement-icon" />
               </span>
               <span>{quantity}</span>
               <span
                 className="self-center px-3 py-3 cursor-pointer border rounded-full"
                 onClick={() => addDesert(item)}
               >
-                <img src={svg} />
+                <img src={svg} alt="increment-icon" />
               </span>
             </div>
           ) : (

@@ -23,7 +23,7 @@ function CartItem({ desert }) {
         className="self-center p-2 cursor-pointer border rounded-full"
         onClick={() => removeItem(desert.id)}
       >
-        <img src={svg} />
+        <img src={svg} alt="cancel-icon" />
       </div>
     </div>
   );

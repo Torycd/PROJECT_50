@@ -1,5 +1,6 @@
-import Card from "./Card";
 import { DUMMY_ITEMS } from "../Store/dummy-item";
+
+import Card from "./Card";
 
 const Items = () => {
   return (

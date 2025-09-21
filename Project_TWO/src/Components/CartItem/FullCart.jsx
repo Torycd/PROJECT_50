@@ -1,12 +1,13 @@
+import { useState } from "react";
 import Modal from "react-modal";
 
 import { usePost } from "../../Store/DesertProvider";
-import CartItem from "./CartItem";
 
+import CartItem from "./CartItem";
 import svg from "../../assets/images/icon-carbon-neutral.svg";
 import svg1 from "../../assets/images/icon-order-confirmed.svg";
-import { useState } from "react";
 import ModalCart from "./ModalCart";
+import Button from "../Button";
 
 Modal.setAppElement("#root");
 
@@ -25,8 +26,7 @@ function FullCart() {
   const handleNewCart = () => {
     setDesertSelected([]);
   };
-
-  console.log(totalCost);
+ 
   return (
     <div className="flex flex-col space-y-4 relative">
       <div>
@@ -40,16 +40,11 @@ function FullCart() {
       </div>
       <div className="py-3 bg-orange-100 rounded-full text-center flex justify-center space-x-2">
         <span>
-          <img src={svg} />
+          <img src={svg} alt="carbon-icon" />
         </span>
         <p>This is a carbon neutral delivery</p>
       </div>
-      <button
-        onClick={handleConfirm}
-        className="bg-orange-500 text-white rounded-full text-center py-3"
-      >
-        Confirm Order
-      </button>
+      <Button onClick={handleConfirm}>Confirm Order</Button>
 
       {/* React Modal */}
       <Modal
@@ -59,7 +54,7 @@ function FullCart() {
         overlayClassName="fixed inset-0 bg-black/60  flex items-center justify-center"
       >
         <span>
-          <img src={svg1} />
+          <img src={svg1} alt="check-icon" />
         </span>
         <h2 className="text-[24px] font-bold">Order Confirmed</h2>
         <p className="text-gray-700 mb-4">We hope you enjoy your food</p>
@@ -78,12 +73,7 @@ function FullCart() {
             </span>
           </div>
         </div>
-        <button
-          onClick={handleNewCart}
-          className="w-full bg-orange-500 text-white rounded-full py-3 font-semibold hover:bg-orange-600 transition"
-        >
-          Start New Cart
-        </button>
+        <Button onClick={handleNewCart}>Start New Cart</Button>
       </Modal>
     </div>
   );

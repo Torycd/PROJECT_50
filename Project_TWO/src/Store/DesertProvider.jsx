@@ -21,11 +21,10 @@ function DesertProvider({ children }) {
   };
 
   function HandleAdd(itm) {
-    // Handle both existing anf no existing deserts
+    // Handle both existing and no existing deserts
     if (itm.id)
       setDesertSelected((previousItem) => {
-        const existing = previousItem.find((i) => i.id == itm.id);
-        // console.log(existing);
+        const existing = previousItem.find((i) => i.id == itm.id);;
         if (existing) {
           return previousItem.map((ds) =>
             ds.id === itm.id ? { ...ds, quantity: ds.quantity + 1 } : ds

@@ -1,6 +1,7 @@
+import { DesertProvider } from "./Store/DesertProvider";
+
 import Cart from "./Components/Cart";
 import Items from "./Components/Items";
-import { DesertProvider } from "./Store/DesertProvider";
 
 const App = () => {
   return (
